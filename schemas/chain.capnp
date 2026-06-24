@@ -22,19 +22,10 @@ interface ChainNotifications {
 }
 
 interface Block {
-    header @0 () -> (header :BlockHeader);
+    header @0 () -> (header :Common.BlockHeader);
     raw @1 () -> (data :Data);
     height @2 () -> (height :UInt32);
     hash @3 () -> (hash :Data);
-}
-
-struct BlockHeader {
-    version    @0 :Int32;
-    prevHash   @1 :Data;
-    merkleRoot @2 :Data;
-    time       @3 :UInt32;
-    bits       @4 :UInt32;
-    nonce      @5 :UInt32;
 }
 
 struct Utxo {

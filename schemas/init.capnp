@@ -2,6 +2,7 @@
 
 using Chain = import "chain.capnp";
 using Mempool = import "mempool.capnp";
+using Mining = import "mining.capnp";
 using Network = import "network.capnp";
 using Node = import "node.capnp";
 using Storage = import "storage.capnp";
@@ -12,4 +13,5 @@ interface Init {
     makeStorage @2 () -> (result :Storage.Storage);
     makeNode @3 () -> (result :Node.Node);
     makeMempool @4 () -> (result :Mempool.Mempool);
+    makeMining @5 () -> (result :Mining.Mining);
 }

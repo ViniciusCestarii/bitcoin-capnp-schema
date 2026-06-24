@@ -2,6 +2,15 @@
 
 interface Handle {}
 
+struct BlockHeader {
+    version    @0 :Int32;
+    prevHash   @1 :Data;
+    merkleRoot @2 :Data;
+    time       @3 :UInt32;
+    bits       @4 :UInt32;
+    nonce      @5 :UInt32;
+}
+
 interface Transaction {
     raw @0 () -> (data :Data);
     decoded @1 () -> (tx :Tx);
