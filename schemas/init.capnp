@@ -1,7 +1,6 @@
 @0xf2c5cfa319406aa6;
 
 using Chain = import "chain.capnp";
-using Fee = import "fee.capnp";
 using Mempool = import "mempool.capnp";
 using Network = import "network.capnp";
 using Node = import "node.capnp";
@@ -13,5 +12,4 @@ interface Init {
     makeStorage @2 () -> (result :Storage.Storage);
     makeNode @3 () -> (result :Node.Node);
     makeMempool @4 () -> (result :Mempool.Mempool);
-    makeFee @5 () -> (result :Fee.Fee);
 }
