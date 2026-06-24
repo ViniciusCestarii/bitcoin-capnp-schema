@@ -29,15 +29,15 @@ interface Block {
 }
 
 struct Utxo {
-    output   @0 :Common.TxOut;
-    height   @1 :UInt32;
+    output @0 :Common.TxOut;
+    height @1 :UInt32;
     coinbase @2 :Bool;
 }
 
 struct ChainStatus {
-    blocks               @0 :UInt32;
-    headers              @1 :UInt32;
-    chainwork            @2 :Data;
+    blocks @0 :UInt32;
+    headers @1 :UInt32;
+    chainwork @2 :Data;
     initialBlockDownload @3 :Bool;
 
     background :union {
@@ -47,8 +47,8 @@ struct ChainStatus {
 }
 
 struct BackgroundValidation {
-    blocks    @0 :UInt32;
-    headers   @1 :UInt32;
+    blocks @0 :UInt32;
+    headers @1 :UInt32;
     chainwork @2 :Data;
 }
 
@@ -56,7 +56,7 @@ struct ChainInfo {
     name @0 :Text;  # "main", "test", "testnet4", "signet", "regtest"
 
     signetChallenge :union {
-        none      @1 :Void;
+        none @1 :Void;
         challenge @2 :Data;
     }
 }

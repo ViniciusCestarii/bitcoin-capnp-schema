@@ -12,7 +12,7 @@ interface Mempool {
 }
 
 struct MempoolInfo {
-    relayFee       @0 :Int64;
+    relayFee @0 :Int64;
     incrementalFee @1 :Int64;
 }
 

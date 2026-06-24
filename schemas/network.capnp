@@ -7,24 +7,24 @@ interface Network {
 }
 
 struct NetworkInfo {
-    localServices  @0 :UInt64;
-    localRelay     @1 :Bool;
-    timeOffset     @2 :Int64;
-    connectionsIn  @3 :UInt32;
+    localServices @0 :UInt64;
+    localRelay @1 :Bool;
+    timeOffset @2 :Int64;
+    connectionsIn @3 :UInt32;
     connectionsOut @4 :UInt32;
-    networkActive  @5 :Bool;
+    networkActive @5 :Bool;
 }
 
 struct NetworkReachability {
-    name                      @0 :Text;
-    limited                   @1 :Bool;
-    reachable                 @2 :Bool;
-    proxy                     @3 :Text;
+    name @0 :Text;
+    limited @1 :Bool;
+    reachable @2 :Bool;
+    proxy @3 :Text;
     proxyRandomizeCredentials @4 :Bool;
 }
 
 struct LocalAddress {
     address @0 :Text;
-    port    @1 :UInt16;
-    score   @2 :Int32;
+    port @1 :UInt16;
+    score @2 :Int32;
 }

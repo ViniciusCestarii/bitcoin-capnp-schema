@@ -5,8 +5,8 @@ interface Node {
 }
 
 struct NodeInfo {
-    version         @0 :UInt32;
-    subversion      @1 :Text;
+    version @0 :UInt32;
+    subversion @1 :Text;
     protocolVersion @2 :UInt32;
-    warnings        @3 :List(Text);
+    warnings @3 :List(Text);
 }
